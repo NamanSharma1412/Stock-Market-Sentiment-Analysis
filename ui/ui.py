@@ -5,7 +5,6 @@ from PyQt5.QtCore import Qt, QTimer,QThread,pyqtSignal
 from PyQt5 import uic
 import completer
 import qdarkstyle
-from Plotter import plotter as plot
 import time
 import requests 
 import io
@@ -373,7 +372,7 @@ class PlotWorker(QThread):
         # self.corr.emit(res_string)
         
         plt.subplots_adjust(hspace=0.5)
-        add = './temp/graph_%s.png'%stock_name
+        add = './output/graph_%s.png'%stock_name
         plt.savefig(add)
         
         # with open('./temp/graph_%s.png'%stock_name, "rb") as image_file:
